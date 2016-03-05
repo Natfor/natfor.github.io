@@ -1,0 +1,422 @@
+/*Grid layout and general content*/
+body { 
+	margin: 0;
+	background-color: rgb(0, 102, 102);
+}
+
+.wrapper{
+	width: 100%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.row{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.column{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
+/**Basis of the grid, content divided in 12 parts
+I've kept only the basis' that are being used
+initally the flex-bassis of each 12th part was included***/
+.col-3{
+	-webkit-flex-basis: 25%;
+	-ms-flex-preferred-size: 25%;
+	flex-basis: 25%;
+}
+
+.col-4{
+	-webkit-flex-basis: 33.3333%;
+	-ms-flex-preferred-size: 33.3333%;
+	flex-basis: 33.3333%;
+}
+
+.col-5{
+	-webkit-flex-basis: 41.6666%;
+	-ms-flex-preferred-size: 41.6666%;
+	flex-basis: 41.6666%;
+}
+
+.col-6{
+	-webkit-flex-basis: 50%;
+	-ms-flex-preferred-size: 50%;
+	flex-basis: 50%;
+}
+
+.col-8{
+	-webkit-flex-basis: 66.6666%;
+	-ms-flex-preferred-size: 66.6666%;
+	flex-basis: 66.6666%;
+}
+
+.col-9{
+	-webkit-flex-basis: 75%;
+	-ms-flex-preferred-size: 75%;
+	flex-basis: 75%;
+}
+
+.col-10{
+	-webkit-flex-basis: 83.3333%;
+	-ms-flex-preferred-size: 83.3333%;
+	flex-basis: 83.3333%;
+}
+
+.col-12{
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+}
+
+@media all and (max-width: 900px) and (min-width: 600px){
+	.col-md-11{
+		-webkit-flex-basis: 91.6666%;
+		-ms-flex-preferred-size: 91.6666%;
+		flex-basis: 91.6666%;
+	}
+
+	.col-md-12{
+		-webkit-flex-basis: 100%;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+}
+
+@media all and (max-width: 600px){
+	.col-min-7{
+		-webkit-flex-basis: 58.3333%;
+		-ms-flex-preferred-size: 58.3333%;
+		flex-basis: 58.3333%;
+	}
+
+	.col-min-9{
+		-webkit-flex-basis: 75%;
+		-ms-flex-preferred-size: 75%;
+		flex-basis: 75%;
+	}
+
+	.col-min-11{
+		-webkit-flex-basis: 91.6666%;
+		-ms-flex-preferred-size: 91.6666%;
+		flex-basis: 91.6666%;
+	}
+
+	.col-min-12{
+		-webkit-flex-basis: 100%;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+}
+
+/**************** main section ********************/
+.main-section{
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: #123036;
+	color: #00d3d1;
+}
+
+/*header*/
+header {
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	background-color: rgb(24, 72, 81);
+}
+
+.logo {
+	margin: 0;
+	width: 100%;
+	max-width: 250px;
+	min-width: 200px;
+}
+
+.header-content-1 {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+.header-content-2 {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-width: 200px;
+}
+
+.header-title {
+	font: bolder 45px "Poiret One", cursive;
+	padding: 5px 0 0 0;
+	margin: 0 0 5px 0;
+}
+
+.header-subtitle {
+	margin: 10px 0 15px 0;
+	font: bold 20px "Poiret One", cursive;
+}
+
+/*nav*/
+nav{
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.featuredW-btn,
+.contact-btn{
+	max-width: 500px;
+	cursor: pointer;
+}
+
+/*buttons will be out of the container on the left side, I intentionally
+kept the buttons like this because I liked the way it looked*/
+.featuredW-btn,
+.contact-btn{
+	font: bolder 18px "Poiret One", cursive;
+	width: 100%;
+	background-color: #00d3d1;
+	color: #10333d;
+	border: 1px solid rgb(24, 72, 81);
+	margin: 5px 0px 5px 0;
+	padding: 0 0 0 10px;
+}
+
+
+/*line*/
+.main-line {
+	height: 7px;
+	padding: 0;
+	background-color: #4e7e8a;
+}
+
+/*image*/
+.main_image {
+	width: 100%;
+	max-width: 1217px;
+	opacity: 0.5;
+}
+
+@media all and (max-width: 1080px){
+	.header-title{
+		font: bolder 40px "Poiret One", cursive;
+	}
+
+	.header-subtitle{
+		font: bold 15px "Poiret One", cursive;
+	}
+
+	.logo{
+		max-width: 250px;
+		min-width: 200px;
+	}
+}
+
+/*main section media queries*/
+@media all and (max-width: 600px){
+	header{
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.header-content-2{
+		-webkit-box-align: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: flex-start;
+		align-items: flex-start;
+	}
+	.header-title{
+		font: bolder 30px "Poiret One", cursive;
+	}
+
+	.header-subtitle{
+		font: bold 12px "Poiret One", cursive;
+	}
+
+	.logo{
+		max-width: 200px;
+	}
+}
+
+@media all and (max-width: 400px){
+	.col-min-6{
+		-webkit-flex-basis: 58.3333%;
+		-ms-flex-preferred-size: 58.3333%;
+		flex-basis: 58.3333%;
+	}
+}
+
+/******Section 2********/
+.section2{
+	height: auto;
+	background-color: rgba(16, 51, 61, 0.2);
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.section2-wrapper {
+	margin: 0 0 30px 0;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.section-title {
+	width: 100%;
+	font: bolder 25px "Poiret One", cursive;
+	color: #00d3d1;
+}
+
+.section2-box {
+	width: 100%;
+	height: auto;
+	background-color: #10333d;
+	padding: 0 0 15px 0;
+	margin: 20px 0 0 0;
+	font: bold 20px "Poiret One", cursive;
+	color: #00d3d1;
+	cursor: pointer;
+	border-radius: 9px;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.section2-images {
+	width: 90%;
+}
+
+.section2-box:hover > .section2-images,
+.section2-box:hover > h2 {
+	opacity: 0.5;
+}
+
+/*section 2 media queries*/
+@media all and (max-width: 950px){
+	.section2-box{
+		font: bold 15px "Poiret One", cursive;
+	}
+}
+
+@media all and (max-width: 600px){
+	.section2-wrapper{
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+}
+
+@media all and (max-width: 500px){
+	.section2-box{
+		font: bold 12px "Poiret One", cursive;
+	}
+
+	.section-title {
+		font: bolder 20px "Poiret One", cursive;
+	}
+}
+
+/*Section 3*/
+.section3{
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	color: #00d3d1;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0 0 15px 0;
+}
+
+.section3-title-content{
+	margin: 30px 0 15px 0;
+}
+
+.email{
+	font: bold 20px "Poiret One", cursive;
+}
+
+.social-media{
+	min-width: 200px;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+.icons{
+	width: 100%;
+	max-width: 100px;
+	cursor: pointer;
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+@media all and (max-width: 500px){
+	.email{
+		font: bold 18px "Poiret One", cursive;
+	}
+}
+
+/*footer*/
+footer{
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	background-color: #10333d;
+	color: gray;
+}
+
+.freekip{
+	color: #00d3d1;
+	cursor: pointer;
+}
+
+/*footer media queries*/
+@media all and (max-width: 500px){
+	footer{
+		font-size: 12px;
+	}
+}
+
+/***Format used for media queries in this project
+found in https://css-tricks.com/css-media-queries/**/
+/************************
+
+External documentation and tools used for guidance:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+http://demo.agektmr.com/flexbox/
+http://prefixr.cloudvent.net/
+*************************/
