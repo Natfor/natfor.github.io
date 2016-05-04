@@ -15,7 +15,7 @@ var githubIcon;
 var codepenIcon;
 var freekip;
 
-/*nav event handlers 
+/*nav event handlers
 code to find the position of the elements taken from:
 http://www.kirupa.com/html5/get_element_position_using_javascript.htm*/
 function getPosition(element) {
@@ -52,7 +52,7 @@ function resumeBoxClick(){
 
 function gameBoxClick(){
 	"use strict";
-	window.open("https://github.com/Natfor/Classic-Arcade-Game", "_blank");
+	window.open("arcade-game.html", "_self");
 }
 
 function mapBoxClick(){
